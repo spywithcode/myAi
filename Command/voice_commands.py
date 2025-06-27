@@ -3,6 +3,7 @@
 import speech_recognition as sr
 import mtranslate
 import pyttsx3
+import os
 
 # Initialize text-to-speech engine
 engine = pyttsx3.init("sapi5")
