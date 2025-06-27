@@ -1,0 +1,51 @@
+# ||Professional Data Scientist || Expert in Python , SQL, AWS , Excel || Data Analyst || Data Pipeline || Django || Flask || PowerBI || AWS Glue
+
+import speech_recognition as sr
+import mtranslate
+import pyttsx3
+
+# Initialize text-to-speech engine
+engine = pyttsx3.init("sapi5")
+engine.setProperty("voice", engine.getProperty("voices")[1].id)  # Replace 1 with the index of Hindi voice
+engine.setProperty("rate", 200)
+
+# Add this code to check available voices
+# voices = engine.getProperty('voices')
+# for idx, voice in enumerate(voices):
+#     print(f"{idx}: {voice.name} - {voice.languages}")
+
+def speak(audio):
+    """Convert English text to Hindi, print and speak it out loud in Hindi."""
+    try:
+        # English se Hindi me translate karein
+        translated_audio = mtranslate.translate(audio, to_language="hi", from_language="en")
+        if translated_audio and translated_audio != audio:
+            print(f"English: {audio}")
+            print(f"Hindi: {translated_audio}")
+            engine.say(translated_audio)
+        else:
+            print(f"English: {audio}")
+            print("Translation failed or not needed, speaking original audio.")
+            engine.say(audio)
+        engine.runAndWait()
+    except Exception as e:
+        print(f"Error in translation: {e}")
+
+def takeCommand():
+    """Listen for a command and return it as a string."""
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        print("Listening...")
+        r.pause_threshold = 1
+        r.energy_threshold = 300
+        audio = r.listen(source)
+
+    try:
+        print("Understanding...")
+        query = r.recognize_google(audio, language='en-in')
+        query = mtranslate.translate(query, to_language="en-in")
+        print(f"You Said: {query}\n")
+    except Exception as e:
+        print("Say that again..")
+        return "None"
+    return query
