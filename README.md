@@ -2,8 +2,7 @@
 
 ## 🤖 AI-Powered [Voice Control AI Sysytem]
 
-![Project Demo GIF/Screenshot](gif.mp4) 
-*(Optional: Replace with a compelling visual demonstration)*
+![C:\Users\mrsan\OneDrive\Desktop\myAi\gif.mp4](gif.mp4)
 
 ## ✨ Problem Solved
 
@@ -43,7 +42,7 @@ To get a local copy up and running, follow these simple steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/spywithcode/My-Portfolio.git)
+    git clone [https://github.com/spywithcode/myAi.git](repository)
     cd your-repo-name
     ```
 2.  **Create a virtual environment (recommended):**
