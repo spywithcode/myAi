@@ -2,7 +2,7 @@
 
 ## 🤖 AI-Powered [Voice Control AI Sysytem]
 
-![gif.mp4](gif.mp4)
+![demo.png](demo.png)
 
 ## ✨ Problem Solved
 
