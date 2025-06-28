@@ -2,7 +2,7 @@
 
 ## 🤖 AI-Powered [Voice Control AI Sysytem]
 
-![C:\Users\mrsan\OneDrive\Desktop\myAi\gif.mp4](gif.mp4)
+![gif.mp4](gif.mp4)
 
 ## ✨ Problem Solved
 
